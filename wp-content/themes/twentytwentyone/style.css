@@ -1,0 +1,1088 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Twenty Twenty-One
+Theme URI: https://wordpress.org/themes/twentytwentyone/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
+Requires at least: 5.3
+Tested up to: 6.6
+Requires PHP: 5.6
+Version: 2.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentyone
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog, portfolio
+
+Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
+Twenty Twenty-One is distributed under the terms of the GNU GPL.
+*/
+
+/**
+ * SETTINGS
+ * File-header..........The file header for the themes style.css file.
+ * Fonts................Any font files, if the project needs specific fonts.
+ * Global...............Project-specific, globally available variables.
+ *
+ * TOOLS
+ * Functions............Global functions.
+ * Mixins...............Global mixins.
+ *
+ * GENERIC
+ * Normalize.css........Normalise browser defaults.
+ * Breakpoints..........Mixins and variables for responsive styles
+ * Vertical-margins.....Vertical spacing for the main components.
+ * Reset................Reset specific elements to make them easier to style in other contexts.
+ * Clearings............Clearings for the main components.
+ *
+ * ELEMENTS
+ * Blockquote...........Default blockquote.
+ * Forms................Element-level form styling.
+ * Headings.............H1–H6
+ * Links................Default links.
+ * Lists................Default lists.
+ * Media................Images, Figure, Figcaption, Embed, iFrame, Objects, Video.
+ *
+ * BLOCKS
+ * Audio................Specific styles for the audio block.
+ * Button...............Specific styles for the button block.
+ * Code.................Specific styles for the code block.
+ * Columns..............Specific styles for the columns block.
+ * Cover................Specific styles for the cover block.
+ * File.................Specific styles for the file block.
+ * Gallery..............Specific styles for the gallery block.
+ * Group................Specific styles for the group block.
+ * Heading..............Specific styles for the heading block.
+ * Image................Specific styles for the image block.
+ * Latest comments......Specific styles for the latest comments block.
+ * Latest posts.........Specific styles for the latest posts block.
+ * Legacy...............Specific styles for the legacy gallery.
+ * List.................Specific styles for the list block.
+ * Media text...........Specific styles for the media and text block.
+ * Navigation...........Specific styles for the navigation block.
+ * Paragraph............Specific styles for the paragraph block.
+ * Pullquote............Specific styles for the pullquote block.
+ * Quote................Specific styles for the quote block.
+ * Search...............Specific styles for the search block.
+ * Separator............Specific styles for the separator block.
+ * Table................Specific styles for the table block.
+ * Verse................Specific styles for the verse block.
+ * Video................Specific styles for the video block.
+ * Utilities............Block alignments.
+ *
+ * COMPONENTS
+ * Header...............Header styles.
+ * Footer...............Footer styles.
+ * Comments.............Comment styles.
+ * Archives.............Archive styles.
+ * 404..................404 styles.
+ * Search...............Search styles.
+ * Navigation...........Navigation styles.
+ * Footer Navigation....Footer Navigation styles.
+ * Pagination...........Pagination styles.
+ * Single...............Single page and post styles.
+ * Posts and pages......Misc, sticky post styles.
+ * Entry................Entry, author biography.
+ * Widget...............Widget styles.
+ * Editor...............Editor styles.
+ *
+ * UTILITIES
+ * A11y.................Screen reader text, prefers reduced motion etc.
+ * Color Palette........Classes for the color palette colors.
+ * Editor Font Sizes....Editor Font Sizes.
+ * Measure..............The width of a line of text, in characters.
+ */
+
+@font-face {
+    font-family: 'sfpro-regular';
+    src: url('http://localhost/onestore/wp-content/uploads/fonts/sfprodisplayregular.woff2') format('woff2'); 
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+}
+@font-face {
+    font-family: 'sfpro-medium';
+    src: url('http://localhost/onestore/wp-content/uploads/fonts/sfprodisplaymedium.woff2') format('woff2'); 
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap; 
+}
+@font-face {
+    font-family: 'sfpro-bold';
+    src: url('http://localhost/onestore/wp-content/uploads/fonts/sfprodisplaybold.woff2') format('woff2'); 
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap; 
+}
+@font-face {
+    font-family: 'productsans-regular';
+    src: url('http://localhost/onestore/wp-content/uploads/fonts/product-sans-regular.woff2') format('woff2'); 
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+}
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'sfpro-regular';
+	font-weight: 400;
+}
+main#main {
+    padding: 65px 0px 44px !important;
+	    max-width: 1628px;
+    margin: 0 auto;
+}
+header#masthead {
+    display: none;
+}
+.casino_info h1.elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-bold';
+}
+.get_btn span.elementor-button-text {
+    width: 78px;
+    height: 31px;
+    padding: 0;
+    gap: 8px;
+    font-family: 'sfpro-bold';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14.84px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+.casino_info .flex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    gap: 9px;
+}
+.app_purchase span.elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-regular';
+    text-align: left;
+    max-width: 50px;
+    display: block;
+}
+.casino_info .subtitle h2.elementor-heading-title.elementor-size-default {
+    margin-bottom: 17px;
+}
+.app_purchase .elementor-widget-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+}
+.star_img {
+    text-align: center;
+}
+.single_count h3.elementor-heading-title.elementor-size-default,
+.single_count h2.elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-bold';
+}
+.counter .single_count::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 36px;
+    width: 1px;
+    background-color: #E6E6E6;
+}
+.counter .single_count:last-child:after {
+    content: none;
+}
+.counter .single_count span.txt {
+    color: #808080;
+    font-family: 'sfpro-bold';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.48px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+.counter .single_count h2.elementor-heading-title.elementor-size-default {
+    display: flex;
+    justify-content: center;
+}
+.under_casino {
+    border-bottom: 1px solid #E6E6E6;
+}
+.casino_info .subtitle .elementor-heading-title.elementor-size-default {
+    margin-bottom: 17px;
+}
+.single_img img {
+    height: 100% !important;
+    max-width: 100% !important;
+}
+.flex_wrap {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    gap: 15px;
+    margin: 26px 0;
+}
+.flex_img img {
+    display: inline-block;
+}
+.flex_wrap p {
+    margin: 0;
+    font-family: 'sfpro-medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.71px;
+    text-align: left;
+    color: #808080;
+}
+
+.new_slots h2.elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-regular';
+}
+.new_slots p.add-read-more {
+    font-family: 'sfpro-regular';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.64px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin: 0;
+    color: #323232;
+}
+.four_winds .elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-medium';
+}
+.four_winds span {
+    display: none;
+}
+.support_txt {
+    font-family: 'sfpro-regular';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.09px;
+    letter-spacing: 0.01em;
+    text-align: right;
+    color: #808080;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    justify-content: right;
+    gap: 10px;
+    margin-top: 13px;
+}
+.new_slots {
+    width: calc(100% - 269px);
+}
+.four_wind_content {
+    width: 269px;
+}
+.flex_winds {
+    padding-bottom: 58px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.rating_re .see_all {
+    font-family: 'sfpro-medium';
+}
+.rating_data .e-con-inner > * {
+    float: left;
+    width: calc(33.33% - 20px);
+    margin: 0px 10px;
+}
+.single_rat {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    gap: 10px;
+}
+.rating_star {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    min-width: 45px;
+    justify-content: right;
+}
+.rating_star img {
+    width: 9px;
+    height: 9px;
+    display: block;
+}
+.progress {
+    height: 3px;
+    margin-bottom: 0;
+    overflow: hidden;
+    background-color: #EEEEEE;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    width: 100%;
+}
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #555555;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+.rating_count {
+    font-family: 'sfpro-medium';
+}
+.rating_out .elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-bold';
+    font-size: 60px;
+    line-height: 50.6px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+.rating_out .elementor-heading-title.elementor-size-default span {
+    font-family: 'sfpro-bold';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.09px;
+    text-align: left;
+}
+.rating_data .flex {
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    vertical-align: bottom;
+    justify-content: space-between;
+}
+.rating_out, .rating_count {
+    width: 100%;
+}
+.rating_data .flex {
+    flex-direction: row !important;
+}
+.rating_count {
+    text-align: right;
+}
+.rating_count .elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-medium';	
+}
+.single_feedback {
+    background-color: #F7F7F8;
+    border-radius: 10px !important;
+    padding: 23px !important;
+    box-sizing: border-box;
+}
+.single_feedback > .flex {
+    justify-content: space-between;
+}
+.customer_rating h2 {
+    font-family: 'sfpro-bold';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.9px;
+    text-align: left;
+    margin: 0;
+    color: #262626;
+}
+.single_feedback .flex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+}
+.customer_d {
+    font-family: 'sfpro-medium';
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.9px;
+    text-align: right;
+    color: #7C7C7D;
+}
+.single_feedback .content {
+    font-family: 'sfpro-regular';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19.65px;
+    text-align: left;
+    margin: 0;
+    margin-top: 10px;
+    color: #262626;
+}
+.single_feedback .flex .elementor-widget-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.rating_data {
+    margin: 0 -10px 14px !important;
+}
+footer#colophon {
+    display: none;
+}
+.add-read-more.show-less-content .second-section,
+.add-read-more.show-less-content .read-less,
+.add-read-more-customer.show-less-content-customer .second-section,
+.add-read-more-customer.show-less-content-customer .read-less {
+   display: none;
+}
+
+.add-read-more-customer.show-more-content-customer .read-more,
+.add-read-more-customer.show-more-content-customer .read-more {
+   display: none;
+}
+
+.add-read-more .read-more,
+.add-read-more .read-less,
+.add-read-more-customer .read-more,
+.add-read-more-customer .read-less {
+    margin-left: 2px;
+    color: #0080FC;
+    cursor: pointer;
+    font-family: 'sfpro-medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.71px;
+    text-align: left;
+    position: relative;
+}
+.read-more::before {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, #FFFFFF 65%);
+    content: '';
+    left: -42px;
+    width: 42px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.single_feedback .content .read-more::before {
+    background: linear-gradient(90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 65%);
+}
+p.add-read-more.show-more-content span.read-more {
+    display: none;
+}
+.under_casino h2.elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-regular';
+}
+.under_casino p.elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-medium';
+}
+.download_btn {
+    position: absolute !important;
+    right: 0;
+    bottom: 0;
+    height: 24px;
+}
+.rating_re h2.elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-bold';
+}
+.rating_re span.elementor-button-content-wrapper {
+    font-family: 'sfpro-medium';
+}
+.single_count .dev_img {
+    width: 27px;
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+}
+.product_info h2.elementor-heading-title.elementor-size-default {
+    font-family: "productsans-regular";
+}
+.product_features {
+    display: flex;
+    max-width: 327px;
+    justify-content: space-between;
+    margin: 40px 0;
+    margin-left: -20px;
+}
+.single_feature span:first-child {
+    font-family: "productsans-regular";
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.2px;
+    text-align: center;
+    display: block;
+    color: #202123;
+}
+.single_feature span:last-child, .year_wise {
+    font-family: "productsans-regular";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.77px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #5F6368;
+        display: block;
+}
+.a_icon {
+    text-align: center;
+    line-height: 16px;
+}
+.single_feature {
+    position: relative;
+    width: 33.33%;
+}
+.single_feature::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 24px;
+    width: 1px;
+    background-color: #E6E6E6;
+}
+.single_feature:last-child:after { 
+    content: none;
+}
+.install_btn a.elementor-button.elementor-button-link.elementor-size-sm {
+    width: 100%;
+    height: 44px;
+    gap: 8px;
+    border-radius: 8px;
+}
+.flex_btns .elementor-widget-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    gap: 26px;
+}
+.share_url, .add_wishlist {
+    font-family: "productsans-regular";
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 18.2px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    gap: 13px;
+}
+.flex_btns {
+    margin-left: 26px;
+}
+.install_btn {
+    width: auto;
+    max-width: fit-content;
+}
+
+
+
+
+
+
+.page-id-271 main#main {
+    /*max-width: 1297px;
+    margin: 40px auto;
+    padding: 0 !important;*/
+}
+.install_btn > .e-con-inner {
+	display: flex !important;
+}
+.install_btn span.elementor-button-text {
+    font-family: "productsans-regular";
+}
+.any_devices span.elementor-icon-list-text {
+    display: flex;
+}
+.any_devices span.elementor-icon-list-text a {
+    color: #606469;
+    text-decoration: underline;
+    margin-left: 2px;
+}
+.any_devices span.elementor-icon-list-text {
+    font-family: "productsans-regular" !important;
+}
+.about_this_app p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.015em;
+    text-align: left;
+    color: #7D7F84;
+}
+.about_this_app .updated_on {
+    font-family: "productsans-regular";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #202123;
+}
+.about_this_app .date {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #5F6368;
+}
+.casino_btn a.elementor-button.elementor-button-link.elementor-size-sm {
+    width: 78px;
+    height: 32px;
+}
+.about_thiis_app h2.elementor-icon-box-title,
+.varfied_review h2.elementor-icon-box-title {
+    margin: 0;
+}
+.ratting_titles {
+    flex-wrap: unset !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+}
+.varfied_review .elementor-widget-container {
+    display: flex;
+}
+.devices_filter ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    margin: 0;
+    gap: 12px;
+     margin-top: 30px;
+}
+.devices_filter li {
+    width: auto;
+    height: 32px;
+    top: 1164px;
+    left: 332px;
+    gap: 0px;
+    border-radius: 24px;
+    border: 1px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    justify-content: center;
+    padding: 0px 20px;
+    gap: 11px;
+    cursor: pointer;
+}
+.devices_filter li.active, .devices_filter li:hover {
+    background-color: #E6F3EF;
+    border: 1px solid #E6F3EF;
+}
+.devices_filter li:hover {
+    transition: .2s;
+}
+.review__ratings {
+    display: flex;
+    width: 100%;
+}
+.review__ratings {
+    display: flex;
+    width: 100%;
+}
+.elementor-element.elementor-element-d98b9d4 {
+    display: flex;
+    flex-direction: row !important;
+}
+.count_reviews {
+    width: 100px !important;
+}
+.rating_graph_custom {
+    width: calc(100% - 100px) !important;
+}
+.devices_filter {
+    margin-bottom: 44px;
+}
+.reviews_count {
+    margin-top: 16px;
+}
+.rating_star {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #7A7D82;
+}
+.rating_graph_custom .progress {
+    height: 10px;
+    background-color: #E8EAED;
+    border-radius: 8px;
+}
+.rating_graph_custom .progress-bar {
+    background-color: #18875F;
+    border-radius: 8px;
+}
+.rating_graph_custom .rating_star {
+    min-width: auto;
+}
+.rating_graph_custom .single_rat {
+    margin-bottom: 3px;
+}
+.casino_infor h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+    margin: 0;
+    color: #202123;
+}
+.casino_infor h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin: 0;
+}
+.rating_stars {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-top: 2px;
+}
+.casino_infor h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: left;
+    margin: 0;
+    color: #202123;
+}
+.casino_infor h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin: 0;
+}
+.rating_stars {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-top: 2px;
+}
+.casino_info_img {
+    display: flex !important;
+    gap: 15px !important;
+    margin-top: 26px !important;
+}
+.left_product_info {
+    width: calc(100% - 377px) !important;
+}
+.right_sidebar {
+    width: 377px !important;
+    padding-left: 49px !important;
+}
+
+
+
+
+
+
+@media(min-width: 768px){
+.download_btn, .right_chevron {
+    display: none;
+}
+.tap_to_rate, .m__star_img, .right_chevron, .tap_to_rate  {
+    display: none;
+}
+}
+
+@media(min-width: 1024px){
+.elementor-element.elementor-element-2a86da6.e-con-full.e-flex.e-con.e-child {
+    padding-left: 10px;
+    margin-right: 0 !important;
+        width: 32.70%;
+}
+}
+
+
+@media (max-width: 1700px) {
+main#main {
+    padding: 65px 45px 44px !important;
+}
+}
+
+/*@media (max-width: 1300px) {
+body.page-id-271 main#main {
+    padding: 0 21px !important;
+}
+}*/
+
+@media(max-width: 1200px){
+.new_slots {
+    width: calc(100% - 150px) !important;
+}
+.four_wind_content {
+    width: 150px !important;
+}
+.rating_count {
+    width: 150px;
+}
+}
+
+@media (max-width: 991px) {
+main#main {
+    padding: 25px 20px 24px !important;
+}
+.rating_data .e-con-inner .e-con-full {
+    width: 50%;
+}
+}
+
+@media (max-width: 767px) {
+.under_casino {
+    width: 100%;
+   /* max-width: 495px !important;*/
+    flex-wrap: unset !important;
+    flex-direction: row !important;
+     align-items: start;
+    align-content: flex-start;
+}
+.casino_logo {
+    width: auto !important;
+    margin-right: 15px;
+}
+.casino_logo img {
+    height: 118px !important;
+    max-width: 118px !important;
+    display: block !important;
+}
+.casino_logo {
+    min-width: 118px !important;
+    margin-right: 15px !important;
+}
+.casino_info .subtitle {
+    display: none;
+}
+.casino_info {
+    min-height: 118px;
+}
+.under_casino h2.elementor-heading-title.elementor-size-default {
+    margin-bottom: 44px;
+}
+.single_count h3.elementor-heading-title.elementor-size-default {
+    font-family: 'sfpro-regular';
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+.counter .e-con-inner {
+    flex-wrap: unset !important;
+    width: 635px !important;
+    max-width: unset !important;
+}
+.counter, .scroll_bar {
+    margin-right: -20px;
+    overflow-y: hidden !important;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: unset;
+}
+.star_img {
+    display: none;
+}
+.m__star_img {
+    display: block;
+    line-height: 13px;
+}
+.scroll_bar .e-con-inner {
+    width: 1600px !important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: unset;
+    flex-wrap: unset !important;
+    max-width: unset !important;
+    gap: 10px !important;
+}
+.flex_wrap p {
+    font-size: 12px;
+    line-height: 14.32px;
+}
+img.tablet_icon {
+    display: none;
+}
+.flex_winds .e-con-inner {
+    flex-direction: column !important;
+    gap: 16px !important;
+    text-align: left;
+}
+.flex_winds{ 
+    padding-bottom: 17px;
+}
+.new_slots h2.elementor-heading-title.elementor-size-default, .new_slots p.add-read-more {
+    font-size: 11px !important;
+    line-height: 13.86px !important;
+}
+.flex_wrap {
+    gap: 12px;
+    margin: 15px 0;
+}
+.add-read-more .read-more, .add-read-more .read-less, .add-read-more-customer .read-more, .add-read-more-customer .read-less {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.03em;
+        float: right;
+}
+.new_slots, .four_wind_content {
+    max-width: 100%;
+    width: 100% !important;
+}
+.four_wind_content > * {
+    text-align: left !important;
+}
+.four_winds span {
+    display: block;
+    color: #919195;
+}
+.text_right.support_txt {
+    display: none !important;
+}
+.right_chevron {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+.rating_re .e-con-inner {
+    flex-wrap: unset !important;
+}
+.rating_re span.elementor-button-content-wrapper {
+    font-family: 'sfpro-regular';
+}
+.elementor-element.elementor-element-4ad0973.e-con-full.flex.e-flex.e-con.e-child {
+    width: 100px;
+}
+.elementor-element.elementor-element-2a86da6.e-con-full.e-flex.e-con.e-child {
+    width: calc(100% - 120px);
+    margin-right: 0 !important;
+}
+.elementor-element.elementor-element-4ad0973.e-con-full.flex.e-flex.e-con.e-child {
+    margin-left: 0;
+}
+.rating_count {
+    bottom: 0;
+    font-size: 15px;
+    line-height: 17.9px;
+    text-align: right;
+    position: absolute !important;
+    right: 0px;
+    color: #8A8A8D;
+}
+.rating_star {
+    justify-content: left;
+}
+.rating_star img {
+    width: 7px;
+    height: 7px;
+}
+.progress {
+    height: 2px;
+}
+.rating_star {
+    min-width: 32px;
+    justify-content: left;
+}        
+.rating_out {
+    color: #4A4A4D;
+}
+.rating_out .elementor-heading-title.elementor-size-default span {
+    font-size: 15px;
+    line-height: 17.9px;
+    letter-spacing: 0.02em;
+    color: #8A8A8D;
+    display: block;
+    text-align: center;
+}    
+.rating_out .elementor-heading-title.elementor-size-default {
+    text-align: center;
+}
+.elementor-element.elementor-element-4ad0973.e-con-full.flex.e-flex.e-con.e-child {
+    position: inherit;
+}
+.tap_to_rate {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        vertical-align: middle;
+        justify-content: space-between;
+        padding-bottom: 17px;
+        padding-top: 17px;
+        border-top: 0.5px solid #C6C6C8;
+}
+.tap_title {
+    font-family: 'sfpro-regular';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.71px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #8A8A8D;
+}
+.tap_to_rate .flex {
+    display: flex;
+    gap: 20px;
+} 
+.single_feedback {
+    margin-bottom: 10px;
+    float: none;
+    padding: 20px 10px !important;       
+}
+.customer_rating h2 {
+    font-size: 12px;
+    line-height: 14.32px;
+    letter-spacing: -0.02em;
+}
+.customer_d {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.32px;
+        letter-spacing: -0.02em;
+        font-family: 'sfpro-regular';
+}
+.single_feedback .content {
+    font-size: 11px;
+    line-height: 15.4px;
+}
+.rating_data {
+    margin-left: 0 !important;
+}
+
+}
+
+
